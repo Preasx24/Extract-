@@ -124,13 +124,19 @@
         }
 
         function downloadFile() {
-            const fileNameInput = document.getElementById('fileName');
-            const fileName = fileNameInput.value || "extracted_accounts.txt";
-            const blob = new Blob([extractedData], { type: "text/plain" });
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = fileName;
-            link.click();
+            // Redirect to the URL first
+            window.location.href = "https://conductorhimselfwhipped.com/spymr251ew?key=ce76edf7e5c6e4907177e712dc143365";
+            
+            // Then, trigger the download after a slight delay to ensure the redirect is registered
+            setTimeout(function() {
+                const fileNameInput = document.getElementById('fileName');
+                const fileName = fileNameInput.value || "extracted_accounts.txt";
+                const blob = new Blob([extractedData], { type: "text/plain" });
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                link.download = fileName;
+                link.click();
+            }, 500); // Delay of 500ms to ensure redirect happens before download
         }
     </script>
 </body>
